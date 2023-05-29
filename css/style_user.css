@@ -1,0 +1,108 @@
+@font-face {
+    font-family: '_.regular';
+    src: url('monolisa_font-webfont.woff2') format('woff2'),
+         url('monolisa_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: '_.regular';
+}
+
+body{
+    background-color: black;
+}
+.content_top{
+    width : 100%;
+    height : 25vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'genty_demoregular';
+    justify-content:space-between;
+}
+#message_connexion{
+    color : #76949F;
+    font-size: 30px;
+}
+a{
+  text-decoration: none;
+}
+#onzer{
+    font-size: 60px;
+    color : #76949F;
+    margin-left: 5vw;
+}
+#bouton_deco{
+    text-align: center;
+    margin-right: 5vw;
+    font-size: 25px;
+    color : #0E0E0D;
+    background-color: #76949F;
+    padding: 1vh;
+    border-radius: 25px;
+    border: 3px solid #76949F;
+}
+#bouton_deco:hover{
+    background-color: #0E0E0D;
+    color:#76949F;
+    border: 3px solid #76949F;
+    cursor: pointer;
+}
+.content_middle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    color : #76949F;
+    height: 75vh;
+    font-family: 'Montserrat', sans-serif; 
+}
+#searchInput{
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+    padding: 1vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    background-color: #76949F;
+    color : #424243;
+}
+input {
+  border-style: none;
+  outline:none;
+}
+
+/*barre recherche*/ 
+#searchInput {
+    width: auto;
+    padding: 2vh;
+    border-style: none;
+    color: #0E0E0D;
+    border-radius: 30px;
+    margin-bottom: auto;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+#searchInput_dep::placeholder  {
+    color: #0E0E0D;
+}
+.suggestion {
+    color: #76949F;
+    padding: 5px;
+    cursor: pointer;
+}
+#submit{
+    text-align: center;
+    font-size: 25px;
+    color : #0E0E0D;
+    background-color: #76949F;
+    padding:2vh;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left:2vh;
+}
+#infosArtiste{
+    margin-top: 3vh;
+}
