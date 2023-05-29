@@ -31,7 +31,6 @@ When you are logged in as a user, you can search for artists in order to display
 
 ## Try it 
 
-* You can see the website without cloning the repository at this [adress](https://mgxbarr.github.io/Onzer/). 
 * Log in as admin with login : admin and password : admin 
 * Log in as user with login : user and password : user
 
