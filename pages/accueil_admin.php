@@ -38,6 +38,8 @@ function ajout_musicien(){
 
   //créer fichier csv de l'artiste
   $nom = $_POST["nom"];
+  $nom=strtolower($nom);
+  $nom=preg_replace("/[^a-zA-Z0-9]/", "", $nom);
   $filename = "../csv/" . $nom . ".csv";
   $file2 = fopen($filename, "w");
   fclose($file2);
@@ -49,6 +51,9 @@ function ajout_titre(){
   );
 
   $nom = $_POST["nom"];
+  echo '<input type="hidden" id="nom" value="' . $nom . '">';
+  $nom=strtolower($nom);
+  $nom=preg_replace("/[^a-zA-Z0-9]/", "", $nom);
   $post_nom = "../csv/" . $nom . ".csv";
   $filename = __DIR__ . '/' . $post_nom;
 
@@ -56,7 +61,7 @@ function ajout_titre(){
   $nomFichier = basename($filename);
   $nomFichier = "../csv/" . $nomFichier;
   echo '<input type="hidden" id="nom_fichier" value="' . $nomFichier . '">';
-
+  
   $file = fopen($filename, "a+");
   foreach ($titre as $line) {
     fputcsv($file,$line,";");
@@ -79,6 +84,9 @@ function readCSV(file,id) {
       //stocke les éléments de liste à afficher dans une variable
       let listItems = '';
 
+      //affiche le nom de l'artiste/groupe 
+      var nom = document.getElementById('nom').value; 
+
       //parcourt chaque ligne et récupère la première colonne
       for (let i = 0; i < lines.length - 1; i++) {
         const columns = lines[i].split(';');
@@ -92,9 +100,8 @@ function readCSV(file,id) {
       const list = '<ul>' + listItems + '</ul>';
 
       //affecte la liste à la div
-      var id_texte = 'text-modal'+id; 
       var div = document.getElementById('text-modal'+id);
-      div.innerHTML = list;
+      div.innerHTML = nom + "<br>"+ list;
     })
     .catch(error => {
       console.error("Une erreur s'est produite lors de la lecture du fichier CSV:", error);
