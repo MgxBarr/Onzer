@@ -43,6 +43,9 @@ if (!isset($_SESSION["pseudo"])){
 
       //enlever les espaces (notamment à la fin)
       nom = nom.trim();
+      nom = nom.toLowerCase();
+      nom = nom.replace(/\s+/g, '');
+
 
       //requête fetch pour obtenir les données du fichier CSV
       fetch('../csv/' + nom + '.csv')
