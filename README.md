@@ -34,4 +34,8 @@ When you are logged in as a user, you can search for artists in order to display
 * Log in as admin with login : admin and password : admin 
 * Log in as user with login : user and password : user
 
+## On going improvements
+
+* Make it responsive
+
 Copyright (c) 2023 Mgx 
